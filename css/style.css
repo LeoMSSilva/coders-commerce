@@ -1,0 +1,273 @@
+:root {
+	--body1: #a9cea733;
+	--body2: #a9cea755;
+	--body3: #a9cea7ff;
+	--gradient1: #00241b;
+	--gradient2: #09792b;
+	--gradient3: #00ffbf;
+	--colorLight: #fcfcfc;
+	--blur: 2px 2px 4px #cccccc;
+	--hover: #bef5cb;
+	--colorDark: #55af69;
+	--backgroundColor: #bef5cbaa;
+	--font1: 'Open Sans', sans-serif;
+	--font2: 'Montserrat', sans-serif;
+	--tableHead: #00b126;
+	--tableOdd: #89b192;
+	--tableEven: #55af69;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: radial-gradient(
+		var(--body1) 0%,
+		var(--body2) 35%,
+		var(--body3) 100%
+	);
+}
+
+button:hover {
+	opacity: 0.7;
+}
+
+td {
+	border: 2px solid var(--colorLight);
+	color: var(--colorLight);
+	font-weight: 800;
+	font-family: var(--font2);
+	padding: 8px 5px;
+	font-size: 14px;
+}
+
+.container {
+	width: 80%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+header {
+	height: 20vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(
+		90deg,
+		var(--gradient1) 0%,
+		var(--gradient2) 35%,
+		var(--gradient3) 100%
+	);
+	box-shadow: var(--blur);
+	border-radius: 0 0 50px 50px;
+}
+
+header h1 {
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-family: var(--font1);
+	color: var(--colorLight);
+	text-shadow: 1px 0px 10px var(--gradient3), 0px 1px 10px var(--gradient3),
+		-1px 0px 10px var(--gradient3), 0px -1px 4px var(--gradient3);
+}
+
+header h2 {
+	margin: 15px auto;
+	font-weight: bold;
+	font-size: 24px;
+	color: var(--colorLight);
+	font-family: var(--font1);
+	font-style: italic;
+}
+
+main h3 {
+	margin: 60px auto 0px;
+	font-weight: bold;
+	font-size: 24px;
+	color: var(--colorDark);
+	font-family: var(--font1);
+	text-shadow: var(--blur);
+	font-style: italic;
+}
+
+main .form-create {
+	padding: 20px;
+}
+
+main .form-create form table {
+	background-color: var(--tableHead);
+	width: 100%;
+}
+
+main .form-create form table tr .label {
+	width: 20%;
+	text-align: left;
+	padding-left: 20px;
+}
+
+main .form-create form table tr .input {
+	width: 80%;
+}
+
+main .form-create form table tr td input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	color: var(--colorLight);
+}
+
+main .form-create form input::placeholder {
+	color: var(--colorLight);
+}
+
+main .form-create input[type='submit'] {
+	width: 180px;
+	height: 100%;
+	margin: 10px auto;
+	cursor: pointer;
+	padding: 8px;
+	outline: none;
+	border: none;
+	border-radius: 50px;
+	font-size: 20px;
+	background-color: var(--tableHead);
+	color: var(--colorLight);
+}
+
+main .content-table {
+	margin: 20px auto;
+	padding: 20px;
+	background-color: var(--backgroundColor);
+	box-shadow: var(--blur);
+	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+}
+
+main .content-table table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+main .content-table table thead,
+.create {
+	background-color: var(--tableHead);
+}
+
+main .content-table table thead tr td {
+	font-size: 16px;
+}
+
+main .content-table table tbody tr:nth-child(odd) {
+	background-color: var(--tableOdd);
+}
+
+main .content-table table tbody tr:nth-child(even) {
+	background-color: var(--tableEven);
+}
+
+main .content-table table tfoot tr td {
+	padding: 0;
+}
+
+footer {
+	height: 10vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background: linear-gradient(
+		270deg,
+		var(--gradient1) 0%,
+		var(--gradient2) 35%,
+		var(--gradient3) 100%
+	);
+	box-shadow: var(--blur);
+	border-radius: 25px 25px 0 0;
+}
+
+footer p {
+	font-weight: 400;
+	font-size: 14px;
+	font-family: var(--font2);
+	color: var(--colorLight);
+	text-shadow: 1px 0px 10px var(--gradient3), 0px 1px 10px var(--gradient3),
+		-1px 0px 10px var(--gradient3), 0px -1px 4px var(--gradient3);
+}
+
+@media (max-width: 600px) {
+	td {
+		padding: 4px 2px;
+		font-size: 10px;
+	}
+
+	header {
+		height: 25vh;
+	}
+
+	header h1 {
+		padding: 0 30px;
+		font-size: 20px;
+	}
+
+	header h2 {
+		margin: 5px auto;
+		font-size: 14px;
+		padding: 0 30px;
+	}
+
+	.container {
+		width: 90%;
+	}
+
+	main h3 {
+		margin: 40px auto 0px;
+	}
+
+	main .form-create {
+		padding: 10px 0;
+	}
+
+	main .form-create form table tr .label {
+		width: 40%;
+		padding-left: 5px;
+		text-align: left;
+		font-size: 12px;
+		letter-spacing: -0.06em;
+	}
+
+	main .form-create form table tr .input {
+		width: 60%;
+	}
+
+	main .form-create input[type='submit'] {
+		width: 100px;
+		height: 100%;
+		margin: 10px auto 0;
+		padding: 8px;
+		font-size: 14px;
+	}
+
+	main .content-table table thead tr td {
+		font-size: 10px;
+	}
+
+	footer p {
+		font-size: 10px;
+	}
+}
