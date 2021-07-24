@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Gestão de cadastros</title>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Coders-Commerce Gestão de cadastros</h1>
+				<h2>
+					Sistema para gerenciar facilmente seus cadastros de produtos e
+					clientes.
+				</h2>
+			</header>
+			<main>
+				<h3>Gestão de Clientes</h3>
+
+				<div class="form-create">
+					<form id="clientForm">
+						<table cellspacing="0">
+							<tr>
+								<td class="label">
+									<label for="clientName">Digite o nome:</label>
+								</td>
+								<td class="input">
+									<input class="create" type="text" id="clientName" required />
+								</td>
+							</tr>
+							<tr>
+								<td class="label">
+									<label for="clientPhone">Digite o telefone:</label>
+								</td>
+								<td class="input">
+									<input class="create" type="text" id="clientPhone" required />
+								</td>
+							</tr>
+							<tr>
+								<td class="label">
+									<label for="clientMail">Digite o e-mail:</label>
+								</td>
+								<td class="input">
+									<input class="create" type="email" id="clientMail" required />
+								</td>
+							</tr>
+							<tr>
+								<td class="label">
+									<label for="clientAddress">Digite o endereço:</label>
+								</td>
+								<td class="input">
+									<input
+										class="create"
+										type="text"
+										id="clientAddress"
+										required
+									/>
+								</td>
+							</tr>
+						</table>
+						<input type="submit" id="addClient" value="Cadastrar" />
+					</form>
+				</div>
+
+				<div class="content-table">
+					<table cellspacing="0">
+						<thead>
+							<tr>
+								<td>Nome</td>
+								<td>Telefone</td>
+								<td>E-mail</td>
+								<td>Endereço</td>
+							</tr>
+						</thead>
+						<tbody id="clientTable"></tbody>
+					</table>
+				</div>
+
+				<h3>Gestão de Produtos</h3>
+
+				<div class="form-create">
+					<form id="productForm">
+						<table cellspacing="0">
+							<tr>
+								<td class="label">
+									<label for="productName">Digite o nome:</label>
+								</td>
+								<td>
+									<input class="create" type="text" id="productName" required />
+								</td>
+							</tr>
+							<tr>
+								<td class="label">
+									<label for="productCategory"> Digite a categoria: </label>
+								</td>
+								<td>
+									<input
+										class="create"
+										type="text"
+										id="productCategory"
+										required
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td class="label">
+									<label for="productProvider"> Digite o fornecedor: </label>
+								</td>
+								<td>
+									<input
+										class="create"
+										type="text"
+										id="productProvider"
+										required
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td class="label">
+									<label for="productAmount"> Digite a quantidade: </label>
+								</td>
+								<td>
+									<input
+										class="create"
+										type="number"
+										id="productAmount"
+										required
+									/>
+								</td>
+							</tr>
+						</table>
+						<input type="submit" id="addProduct" value="Cadastrar" />
+					</form>
+				</div>
+
+				<div class="content-table">
+					<table cellspacing="0">
+						<thead>
+							<tr>
+								<td>Nome</td>
+								<td>Fornecedor</td>
+								<td>Categoria</td>
+								<td>Quantidade</td>
+							</tr>
+						</thead>
+						<tbody id="productTable"></tbody>
+					</table>
+				</div>
+			</main>
+			<footer>
+				<p>Todos os direitos reservados. &copy; LeoMSSilva</p>
+			</footer>
+		</div>
+	</body>
+	<script src="js/script.js"></script>
+</html>
